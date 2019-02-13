@@ -16,6 +16,9 @@
 		72797B542212DB4000345C49 /* EventScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72797B532212DB4000345C49 /* EventScreen.storyboard */; };
 		72797B5B2212E27E00345C49 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72797B5A2212E27E00345C49 /* TwitterViewController.swift */; };
 		72797B602212F5BE00345C49 /* TwitterScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72797B5F2212F5BE00345C49 /* TwitterScreen.storyboard */; };
+		72797B6422145B6C00345C49 /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72797B6322145B6C00345C49 /* EventResponse.swift */; };
+		72797B6622145C2700345C49 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72797B6522145C2700345C49 /* Event.swift */; };
+		72797B68221471B100345C49 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72797B67221471B100345C49 /* EventCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		72797B5A2212E27E00345C49 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		72797B5E2212EECD00345C49 /* Eventapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eventapp-Bridging-Header.h"; sourceTree = "<group>"; };
 		72797B5F2212F5BE00345C49 /* TwitterScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterScreen.storyboard; sourceTree = "<group>"; };
+		72797B6322145B6C00345C49 /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
+		72797B6522145C2700345C49 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		72797B67221471B100345C49 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		AD90628467240C1601E48E8F /* Pods_Eventapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,7 @@
 			children = (
 				72797B2E2211916D00345C49 /* EventViewController.swift */,
 				72797B5A2212E27E00345C49 /* TwitterViewController.swift */,
+				72797B67221471B100345C49 /* EventCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -123,11 +130,29 @@
 		72797B572212E11A00345C49 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				72797B6122145A2400345C49 /* Json */,
 				72797B2C2211916D00345C49 /* AppDelegate.swift */,
 				72797B462211AC5D00345C49 /* UI */,
 				72797B5E2212EECD00345C49 /* Eventapp-Bridging-Header.h */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		72797B6122145A2400345C49 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				72797B6222145A2F00345C49 /* Events */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		72797B6222145A2F00345C49 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				72797B6322145B6C00345C49 /* EventResponse.swift */,
+				72797B6522145C2700345C49 /* Event.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		EFBA4DEAE64DB3DDC3C579BB /* Pods */ = {
@@ -242,6 +267,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Eventapp/Pods-Eventapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
@@ -249,6 +276,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -288,7 +317,10 @@
 			files = (
 				72797B5B2212E27E00345C49 /* TwitterViewController.swift in Sources */,
 				72797B2F2211916D00345C49 /* EventViewController.swift in Sources */,
+				72797B68221471B100345C49 /* EventCell.swift in Sources */,
 				72797B2D2211916D00345C49 /* AppDelegate.swift in Sources */,
+				72797B6422145B6C00345C49 /* EventResponse.swift in Sources */,
+				72797B6622145C2700345C49 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
